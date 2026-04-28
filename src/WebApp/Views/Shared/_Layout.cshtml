@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BYA Unsupported Web App</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">BYA Demo App</a>
+            <ul class="nav-links">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Items" asp-action="Index">Items</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>Running on <strong>.NET Core 2.1</strong> with <strong>Amazon DynamoDB</strong> &mdash; technologies not supported by Microsoft Azure.</p>
+    </footer>
+</body>
+</html>
