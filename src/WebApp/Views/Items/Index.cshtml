@@ -1,0 +1,40 @@
+@model List<WebApp.Models.Item>
+@{
+    ViewData["Title"] = "Items";
+}
+
+<div class="page-header">
+    <h2>Items</h2>
+    <a class="btn" asp-action="Create">+ New Item</a>
+</div>
+
+@if (!Model.Any())
+{
+    <p class="empty">No items yet. <a asp-action="Create">Create one</a>.</p>
+}
+else
+{
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td>@item.CreatedAt.ToString("yyyy-MM-dd HH:mm") UTC</td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

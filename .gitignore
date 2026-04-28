@@ -1,0 +1,20 @@
+# Build outputs
+bin/
+obj/
+*.user
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# .NET Core publish output
+publish/
+
+# User secrets (do not commit)
+src/WebApp/appsettings.*.json
+!src/WebApp/appsettings.json
+!src/WebApp/appsettings.Development.json

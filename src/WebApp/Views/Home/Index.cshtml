@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero">
+    <h1>BYA Unsupported Web App</h1>
+    <p>This application intentionally uses technologies that <strong>Microsoft Azure does not support</strong>:</p>
+    <ul class="tech-list">
+        <li>
+            <strong>.NET Core 2.1</strong> &mdash; End-of-life runtime. Azure App Service only supports
+            current and LTS .NET releases; .NET Core 2.1 is no longer listed as a supported stack.
+        </li>
+        <li>
+            <strong>Amazon DynamoDB</strong> &mdash; AWS-native NoSQL database service. Azure has no
+            native integration or managed offering for DynamoDB.
+        </li>
+    </ul>
+    <a class="btn" asp-controller="Items" asp-action="Index">Browse Items &rarr;</a>
+</div>
